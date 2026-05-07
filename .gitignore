@@ -1,0 +1,47 @@
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+yarn-debug.log
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env/
+
+# Environment variables and Firebase Service Accounts (CRITICAL SECURITY)
+.env
+.env.*
+.env.local
+*.pem
+serviceAccountKey.json
+*/serviceAccountKey.json
+
+# Flutter/Dart (Common ones, free_fire_app has its own .gitignore too)
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+build/
+*.jks
+*.keystore
+android/key.properties

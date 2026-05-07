@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Free Fire Diamonds Support</title>
+    <meta name="description" content="Contact our support team for help with Free Fire diamonds app. Report issues, ask questions, or request assistance.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Added EmailJS SDK for email functionality -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            // Replace with your actual EmailJS public key
+            emailjs.init("jqrmwogoteqvtjdy");
+        })();
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6527773495865072"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav">
+                <div class="logo">
+                    <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.5rem;">
+                        <span class="logo-icon">💎</span>
+                        <span class="logo-text">FF Diamonds</span>
+                    </a>
+                </div>
+                <div class="nav-links">
+                    <button class="language-toggle" id="languageToggle">
+                        <span class="lang-icon">🌐</span>
+                        <span class="lang-text" data-translate="lang-toggle">EN</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contact Hero Section -->
+    <section class="contact-hero">
+        <div class="container">
+            <div class="contact-hero-content">
+                <h1 class="contact-title" data-translate="contact-title">Contact Support</h1>
+                <p class="contact-description" data-translate="contact-description">
+                    Need help with the app? Have questions or issues? We're here to help you 24/7!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2 class="contact-info-title" data-translate="contact-info-title">Get in Touch</h2>
+                    <p class="contact-info-desc" data-translate="contact-info-desc">
+                        Fill out the form and we'll get back to you within 24 hours. For urgent issues, please include your Free Fire ID and detailed description.
+                    </p>
+                    
+                    <div class="contact-features">
+                        <div class="contact-feature">
+                            <div class="contact-feature-icon">⚡</div>
+                            <div class="contact-feature-text">
+                                <h4 data-translate="contact-feature1-title">Quick Response</h4>
+                                <p data-translate="contact-feature1-desc">We respond within 24 hours</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-feature">
+                            <div class="contact-feature-icon">🔒</div>
+                            <div class="contact-feature-text">
+                                <h4 data-translate="contact-feature2-title">Secure & Private</h4>
+                                <p data-translate="contact-feature2-desc">Your information is safe with us</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-feature">
+                            <div class="contact-feature-icon">💎</div>
+                            <div class="contact-feature-text">
+                                <h4 data-translate="contact-feature3-title">Expert Support</h4>
+                                <p data-translate="contact-feature3-desc">Our team knows the app inside out</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name" class="form-label" data-translate="form-name">Your Name</label>
+                            <input type="text" id="name" name="name" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label" data-translate="form-email">Email Address</label>
+                            <input type="email" id="email" name="email" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="freeFireId" class="form-label" data-translate="form-ffid">Free Fire ID (Optional)</label>
+                            <input type="text" id="freeFireId" name="freeFireId" class="form-input" placeholder="123456789">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="issueType" class="form-label" data-translate="form-issue-type">Issue Type</label>
+                            <select id="issueType" name="issueType" class="form-select" required>
+                                <option value="" data-translate="form-select-option">Select an issue type</option>
+                                <option value="download" data-translate="form-option-download">Download/Installation Problem</option>
+                                <option value="tokens" data-translate="form-option-tokens">Tokens/Ads Issue</option>
+                                <option value="diamonds" data-translate="form-option-diamonds">Diamond Exchange Problem</option>
+                                <option value="account" data-translate="form-option-account">Account Issue</option>
+                                <option value="competition" data-translate="form-option-competition">Competition/League Issue</option>
+                                <option value="other" data-translate="form-option-other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject" class="form-label" data-translate="form-subject">Subject</label>
+                            <input type="text" id="subject" name="subject" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="form-label" data-translate="form-message">Detailed Message</label>
+                            <textarea id="message" name="message" class="form-textarea" rows="6" required placeholder="Please describe your issue in detail..."></textarea>
+                        </div>
+
+                        <button type="submit" class="form-submit" id="submitBtn">
+                            <span class="submit-text" data-translate="form-submit">Send Message</span>
+                            <span class="submit-loading" style="display: none;" data-translate="form-sending">Sending...</span>
+                        </button>
+                    </form>
+
+                    <!-- Success Message -->
+                    <div class="success-message" id="successMessage" style="display: none;">
+                        <div class="success-icon">✅</div>
+                        <h3 class="success-title" data-translate="success-title">Message Sent Successfully!</h3>
+                        <p class="success-text" data-translate="success-text">
+                            Thank you for contacting us. We've received your message and will respond within 24 hours. 
+                            You should also receive a confirmation email shortly.
+                        </p>
+                        <button class="success-button" onclick="resetForm()" data-translate="success-button">Send Another Message</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Link Section -->
+    <section class="faq-link-section">
+        <div class="container">
+            <div class="faq-link-content">
+                <h3 class="faq-link-title" data-translate="faq-link-title">Looking for Quick Answers?</h3>
+                <p class="faq-link-desc" data-translate="faq-link-desc">
+                    Check our FAQ page for instant solutions to common problems.
+                </p>
+                <a href="faq.html" class="faq-link-button" data-translate="faq-link-button">
+                    View FAQ
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="logo-icon">💎</span>
+                        <span class="logo-text">FF Diamonds</span>
+                    </div>
+                    <p class="footer-description">
+                        The most trusted app for earning Free Fire diamonds through watching ads and participating in competitions.
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="privacy.html" target="_blank" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="deletingData.html" target="_blank" class="footer-link">Delete My Data</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="faq.html" class="footer-link">FAQ</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+                        <li><a href="index.html" class="footer-link">Back to Home</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    © 2025 FF Diamonds App. All rights reserved. Not affiliated with Garena Free Fire.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="contact.js"></script>
+</body>
+</html>
